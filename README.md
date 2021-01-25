@@ -1,7 +1,7 @@
 # UniBT
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
-[![release](http://github-release-version.herokuapp.com/github/allure-framework/allure-core/release.svg?style=flat)](https://github.com/yoshidan/UniBT/releases)
+[![GitHub release](https://img.shields.io/github/release/yoshidan/UniBT.svg)](https://github.com/yoshidan/UniBT/releases)
 
 Free [Behavior Tree](https://en.wikipedia.org/wiki/Behavior_tree_(artificial_intelligence,_robotics_and_control)) designer for Unity.
  
