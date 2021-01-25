@@ -2,6 +2,7 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
 [![GitHub release](https://img.shields.io/github/release/yoshidan/UniBT.svg)](https://github.com/yoshidan/UniBT/releases)
+[![Github all releases](https://img.shields.io/github/downloads/yoshidan/UniBT/total.svg)](https://gitHub.com/yoshidan/UniBT/releases/)
 
 Free [Behavior Tree](https://en.wikipedia.org/wiki/Behavior_tree_(artificial_intelligence,_robotics_and_control)) designer for Unity.
  
