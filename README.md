@@ -102,7 +102,7 @@ Selector has following parameter.
 * Updates the child nodes in order. Unlike Sequencer, one child node is executed by one update instead of executing all child nodes by one update.  
 * For example, if there are three child nodes, the first Update will execute the top node, the next Update will execute the second node, and the next Update will execute the third node.  
 * The next run will run the top node again.  
-* The node that returned the running status at the time of the previous update will continue to be executed at the next update.  
+* If a child node returns a running state, it exits without executing subsequent child nodes, and the child node continues to run on the next update.
 
 Rotator has following parameter.
 
@@ -154,7 +154,6 @@ public class Wait : Action
 
 ### Create Conditional
 * Create C# Script and extends `UniBT.Conditional`
-* Conditional Node holds whether the previous status is `Status.Running` and calls child `Abort` when the parent condition changed.
 * Override `IsUpdatable` and return result(true/false). when `IsUpdatable` returns update child.
 * Override `OnAwake` called by `UniBT.BehaviorTree.Awake` if needed.
 * Override `OnStart` called by `UniBT.BehaviorTree.Start` if needed.
