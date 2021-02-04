@@ -20,14 +20,14 @@ Unity向けの[Behavior Tree](https://en.wikipedia.org/wiki/Behavior_tree_(artif
 ## Get Started
 
 1. [Unityパッケージ](https://github.com/yoshidan/UniBT/releases)をダウンロードしてインストールしてください。
-2. 任意のGameObjectに `UniBT.BehaviorTree` コンポーネントを追加してください。
+2. 任意のGameObjectに `UniBT.BehaviorTree` コンポーネントを追加してください。  
    <img src="images/started1.jpg" width="240"/>
-3. `Open Graph Editor` を押すと、GraphViewのウインドウが立ち上がり編集できるようになります。
+3. `Open Graph Editor` を押すと、GraphViewのウインドウが立ち上がり編集できるようになります。  
    <img src="images/started2.jpg" width="360"/>
 4. ノードを追加してパラメータを設定します。
-5. Saveボタンを設定がGameObjectに反映されます。ノードの設定に不備がある場合、エラーになり保存できません。（対象ノードが赤くなります）
+5. Saveボタンを設定がGameObjectに反映されます。ノードの設定に不備がある場合、エラーになり保存できません。（対象ノードが赤くなります）  
    <img src="images/started3.gif" width="480"/>  
-6. Unityを実行すると、構築したツリーが起動します。各ノードの状態はGraphView上で閲覧可能です。
+6. Unityを実行すると、構築したツリーが起動します。各ノードの状態はGraphView上で閲覧可能です。  
    <img src="images/started4.jpg" width="480"/>
    
    * 赤色のノードは実行結果が「失敗」であることを示しています。
