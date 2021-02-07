@@ -6,7 +6,12 @@ namespace UniBT
     public class All : Composite
     {
 
-        private readonly List<NodeBehavior> runningNodes = new List<NodeBehavior>();
+        private List<NodeBehavior> runningNodes;
+
+        protected override void OnAwake()
+        {
+            runningNodes = new List<NodeBehavior>();
+        }
 
         /// <summary>
         /// Update all nodes.
