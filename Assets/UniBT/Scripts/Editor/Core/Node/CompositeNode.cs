@@ -10,6 +10,8 @@ namespace UniBT.Editor
     {
         public readonly List<Port> ChildPorts = new List<Port>();
 
+        private List<BehaviorTreeNode> cache = new List<BehaviorTreeNode>();
+
         public override void BuildContextualMenu(ContextualMenuPopulateEvent evt)
         {
             evt.menu.MenuItems().Add(new BehaviorTreeDropdownMenuAction("Change Behavior", (a) =>
@@ -35,7 +37,7 @@ namespace UniBT.Editor
 
         private void RemoveUnnecessaryChildren()
         {
-            var unnecessary = ChildPorts.Where(p => p.connections.ToList().Count == 0).ToList();
+            var unnecessary = ChildPorts.Where(p => !p.connected).ToList();
             unnecessary.ForEach(e =>
             {
                 ChildPorts.Remove(e);
@@ -49,13 +51,12 @@ namespace UniBT.Editor
 
             foreach (var port in ChildPorts)
             {
-                var edges = port.connections.ToList();
-                if (edges.Count == 0)
+                if (!port.connected)
                 {
                     style.backgroundColor = Color.red;
                     return false;
                 }
-                stack.Push(edges.First().input.node as BehaviorTreeNode);
+                stack.Push(port.connections.First().input.node as BehaviorTreeNode);
             }
             style.backgroundColor = new StyleColor(StyleKeyword.Null);
             return true;
@@ -63,21 +64,21 @@ namespace UniBT.Editor
 
         protected override void OnCommit(Stack<BehaviorTreeNode> stack)
         {
+            cache.Clear();
             foreach (var port in ChildPorts)
             {
-                var edges = port.connections.ToList();
-                var child = edges.First().input.node as BehaviorTreeNode;
-                (this.NodeBehavior as Composite).AddChild(child.ReplaceBehavior());
+                var child = port.connections.First().input.node as BehaviorTreeNode;
+                (NodeBehavior as Composite).AddChild(child.ReplaceBehavior());
                 stack.Push(child);
+                cache.Add(child);
             }
         }
 
         protected override void OnClearStyle()
         {
-            foreach (var port in ChildPorts)
+            foreach (var node in cache)
             {
-                var edges = port.connections.ToList();
-                (edges.First().input.node as BehaviorTreeNode).ClearStyle();
+                node.ClearStyle();
             }
         }
     }

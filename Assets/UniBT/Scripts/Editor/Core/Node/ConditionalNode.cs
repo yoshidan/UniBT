@@ -11,6 +11,8 @@ namespace UniBT.Editor
 
         public Port Child => childPort;
 
+        private BehaviorTreeNode cache;
+
         public override void BuildContextualMenu(ContextualMenuPopulateEvent evt)
         {
             evt.menu.MenuItems().Add(new BehaviorTreeDropdownMenuAction("Change Behavior", (a) =>
@@ -28,37 +30,31 @@ namespace UniBT.Editor
 
         protected override bool OnValidate(Stack<BehaviorTreeNode> stack)
         {
-            var edges = childPort.connections.ToList();
-            if (edges.Count == 0)
+            if (!childPort.connected)
             {
                 return true;
             }
-            stack.Push(edges.First().input.node as BehaviorTreeNode);
+            stack.Push(childPort.connections.First().input.node as BehaviorTreeNode);
             return true;
         }
 
         protected override void OnCommit(Stack<BehaviorTreeNode> stack)
         {
-            var edges = childPort.connections.ToList();
-            if (edges.Count == 0)
+            if (!childPort.connected)
             {
                 (NodeBehavior as Conditional).Child = null;
+                cache = null;
                 return;
             }
-            var child = edges.First().input.node as BehaviorTreeNode;
+            var child = childPort.connections.First().input.node as BehaviorTreeNode;
             (NodeBehavior as Conditional).Child = child.ReplaceBehavior();
             stack.Push(child);
+            cache = child;
         }
 
         protected override void OnClearStyle()
         {
-            var edges = childPort.connections.ToList();
-            if (edges.Count == 0)
-            {
-                return;
-            }
-            var child = edges.First().input.node as BehaviorTreeNode;
-            child.ClearStyle();
+            cache?.ClearStyle();
         }
     }
 }

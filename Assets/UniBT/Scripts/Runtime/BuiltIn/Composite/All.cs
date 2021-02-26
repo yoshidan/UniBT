@@ -1,5 +1,4 @@
 using System.Collections.Generic;
-using System.Linq;
 
 namespace UniBT
 {
@@ -22,16 +21,18 @@ namespace UniBT
         protected override Status OnUpdate()
         {
             runningNodes.Clear();
-            var anyFailed = Children.Select(c =>
+            var anyFailed = false;
+            foreach (var c in Children)
             {
                 var result = c.Update();
                 if (result == Status.Running)
                 {
                     runningNodes.Add(c);
+                }else if (result == Status.Failure)
+                {
+                    anyFailed = true;
                 }
-                return result;
-            }).Any(r => r == Status.Failure);
-
+            }
             if (runningNodes.Count > 0)
             {
                 return Status.Running;

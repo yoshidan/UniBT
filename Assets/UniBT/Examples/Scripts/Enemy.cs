@@ -48,6 +48,7 @@ namespace UniBT.Examples.Scripts
 
         private void OnCollisionStay(Collision other)
         {
+            // TODO other.collider.name cause GC.Alloc by Object.GetName
             if (Attacking && other.collider.name == "Ground" && Mathf.Abs(rigid.velocity.y) < 0.1)
             {
                 CancelAttack();

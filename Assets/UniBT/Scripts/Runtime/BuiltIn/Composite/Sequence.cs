@@ -1,4 +1,3 @@
-using System.Linq;
 using UnityEngine;
 
 namespace UniBT
@@ -13,7 +12,14 @@ namespace UniBT
         public override bool CanUpdate()
         {
             //this node can update when all children can update
-            return Children.All(c => c.CanUpdate());
+            foreach (var child in Children)
+            {
+                if (!child.CanUpdate())
+                {
+                    return false;
+                }
+            }
+            return true;
         }
 
         protected override Status OnUpdate()

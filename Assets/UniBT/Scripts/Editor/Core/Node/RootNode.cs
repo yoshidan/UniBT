@@ -8,6 +8,8 @@ namespace UniBT.Editor
     {
         public readonly Port Child;
 
+        private BehaviorTreeNode cache;
+
         public RootNode() 
         {
             SetBehavior(typeof(Root));
@@ -31,24 +33,22 @@ namespace UniBT.Editor
 
         protected override bool OnValidate(Stack<BehaviorTreeNode> stack)
         {
-            var edges = Child.connections.ToList();
-            if (edges.Count == 0)
+            if (!Child.connected)
             {
                 return false;
             }
-            stack.Push(edges.First().input.node as BehaviorTreeNode);
+            stack.Push(Child.connections.First().input.node as BehaviorTreeNode);
             return true;
         }
         protected override void OnCommit(Stack<BehaviorTreeNode> stack)
         {
-            var edges = Child.connections.ToList();
-            var child = edges.First().input.node as BehaviorTreeNode;
-
+            var child = Child.connections.First().input.node as BehaviorTreeNode;
             var newRoot = new Root();
             newRoot.Child = child.ReplaceBehavior();
             newRoot.UpdateEditor = ClearStyle;
             NodeBehavior = newRoot;
             stack.Push(child);
+            cache = child;
         }
 
         public void PostCommit(BehaviorTree tree)
@@ -58,9 +58,7 @@ namespace UniBT.Editor
 
         protected override void OnClearStyle()
         {
-            var edges = Child.connections.ToList();
-            var child = edges.First().input.node as BehaviorTreeNode;
-            child.ClearStyle();
+            cache?.ClearStyle();
         }
     }
 }
