@@ -30,8 +30,7 @@ I will provide easily customizable and free designer.
 {
   "dependencies": {
     ...
-    "com.github.yoshidan.UniBT": "https://github.com/yoshidan/UniBT.git",
-    ...
+    "com.github.yoshidan.unibt": "https://github.com/yoshidan/UniBT.git?path=Assets/UniBT/Scripts"
   }
 }
 ```
