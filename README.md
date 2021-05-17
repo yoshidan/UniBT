@@ -25,7 +25,7 @@ I will provide easily customizable and free designer.
 ## Get Started
 
 1. [Download](https://github.com/yoshidan/UniBT/releases) and install unity package.   
-  The plugin can also be imported with Package Manager, by adding the following entry in your `Packages/manifest.json`:
+  Also the package can also be imported with Package Manager, by adding the following entry in your `Packages/manifest.json`:
 ```json
 {
   "dependencies": {
