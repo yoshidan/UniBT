@@ -24,7 +24,18 @@ I will provide easily customizable and free designer.
 
 ## Get Started
 
-1. [Download](https://github.com/yoshidan/UniBT/releases) and install unity package.
+1. [Download](https://github.com/yoshidan/UniBT/releases) and install unity package.   
+  Also the package can also be imported with Package Manager, by adding the following entry in your `Packages/manifest.json`:
+```json
+{
+  "dependencies": {
+    ...
+    "com.github.yoshidan.unibt": "https://github.com/yoshidan/UniBT.git?path=Assets/UniBT/Scripts"
+  }
+}
+```
+
+
 2. Add `UniBT.BehaviorTree` component for any GameObject.  
    <img src="images/started1.jpg" width="240"/>
 3. `Open Graph Editor` button opens GraphView for Behavior Tree.  
