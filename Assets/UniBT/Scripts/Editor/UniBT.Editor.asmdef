@@ -1,0 +1,11 @@
+{
+    "name": "UniBT.Editor",
+    "references": [
+        "UniBT"
+    ],
+    "optionalUnityReferences": [],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": []
+}
