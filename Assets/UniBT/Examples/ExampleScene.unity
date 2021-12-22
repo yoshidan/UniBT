@@ -438,7 +438,7 @@ MonoBehaviour:
   references:
     version: 1
     00000000:
-      type: {class: Root, ns: UniBT, asm: Assembly-CSharp}
+      type: {class: Root, ns: UniBT, asm: UniBT}
       data:
         graphPosition:
           serializedVersion: 2
@@ -450,7 +450,7 @@ MonoBehaviour:
         child:
           id: 1
     00000001:
-      type: {class: Selector, ns: UniBT, asm: Assembly-CSharp}
+      type: {class: Selector, ns: UniBT, asm: UniBT}
       data:
         graphPosition:
           serializedVersion: 2
@@ -465,7 +465,7 @@ MonoBehaviour:
         - id: 4
         abortOnConditionChanged: 1
     00000002:
-      type: {class: Sequence, ns: UniBT, asm: Assembly-CSharp}
+      type: {class: Sequence, ns: UniBT, asm: UniBT}
       data:
         graphPosition:
           serializedVersion: 2
@@ -479,7 +479,7 @@ MonoBehaviour:
         - id: 6
         abortOnConditionChanged: 1
     00000003:
-      type: {class: IsHateGt, ns: UniBT.Examples.Scripts.Behavior, asm: Assembly-CSharp}
+      type: {class: IsHateGt, ns: UniBT.Examples.Scripts.Behavior, asm: Example}
       data:
         graphPosition:
           serializedVersion: 2
@@ -493,7 +493,7 @@ MonoBehaviour:
           id: 7
         threshold: 5
     00000004:
-      type: {class: Sequence, ns: UniBT, asm: Assembly-CSharp}
+      type: {class: Sequence, ns: UniBT, asm: UniBT}
       data:
         graphPosition:
           serializedVersion: 2
@@ -507,7 +507,7 @@ MonoBehaviour:
         - id: 9
         abortOnConditionChanged: 1
     00000005:
-      type: {class: Selector, ns: UniBT, asm: Assembly-CSharp}
+      type: {class: Selector, ns: UniBT, asm: UniBT}
       data:
         graphPosition:
           serializedVersion: 2
@@ -521,7 +521,7 @@ MonoBehaviour:
         - id: 11
         abortOnConditionChanged: 1
     00000006:
-      type: {class: All, ns: UniBT, asm: Assembly-CSharp}
+      type: {class: All, ns: UniBT, asm: UniBT}
       data:
         graphPosition:
           serializedVersion: 2
@@ -534,7 +534,7 @@ MonoBehaviour:
         - id: 12
         - id: 13
     00000007:
-      type: {class: LookAtAction, ns: UniBT.Examples.Scripts.Behavior, asm: Assembly-CSharp}
+      type: {class: LookAtAction, ns: UniBT.Examples.Scripts.Behavior, asm: Example}
       data:
         graphPosition:
           serializedVersion: 2
@@ -546,7 +546,7 @@ MonoBehaviour:
         useLerp: 1
         target: {fileID: 763948894}
     00000008:
-      type: {class: FollowAction, ns: UniBT.Examples.Scripts.Behavior, asm: Assembly-CSharp}
+      type: {class: FollowAction, ns: UniBT.Examples.Scripts.Behavior, asm: Example}
       data:
         graphPosition:
           serializedVersion: 2
@@ -559,7 +559,7 @@ MonoBehaviour:
         speed: 1
         stoppingDistance: 0.5
     00000009:
-      type: {class: ScaleAction, ns: UniBT.Examples.Scripts.Behavior, asm: Assembly-CSharp}
+      type: {class: ScaleAction, ns: UniBT.Examples.Scripts.Behavior, asm: Example}
       data:
         graphPosition:
           serializedVersion: 2
@@ -569,7 +569,7 @@ MonoBehaviour:
           height: 96
         description: 
     0000000A:
-      type: {class: IsAttacking, ns: UniBT.Examples.Scripts.Behavior, asm: Assembly-CSharp}
+      type: {class: IsAttacking, ns: UniBT.Examples.Scripts.Behavior, asm: Example}
       data:
         graphPosition:
           serializedVersion: 2
@@ -582,7 +582,7 @@ MonoBehaviour:
         child:
           id: 14
     0000000B:
-      type: {class: IsHateGt, ns: UniBT.Examples.Scripts.Behavior, asm: Assembly-CSharp}
+      type: {class: IsHateGt, ns: UniBT.Examples.Scripts.Behavior, asm: Example}
       data:
         graphPosition:
           serializedVersion: 2
@@ -596,7 +596,7 @@ MonoBehaviour:
           id: 14
         threshold: 10
     0000000C:
-      type: {class: LookAtAction, ns: UniBT.Examples.Scripts.Behavior, asm: Assembly-CSharp}
+      type: {class: LookAtAction, ns: UniBT.Examples.Scripts.Behavior, asm: Example}
       data:
         graphPosition:
           serializedVersion: 2
@@ -608,7 +608,7 @@ MonoBehaviour:
         useLerp: 1
         target: {fileID: 763948894}
     0000000D:
-      type: {class: Sequence, ns: UniBT, asm: Assembly-CSharp}
+      type: {class: Sequence, ns: UniBT, asm: UniBT}
       data:
         graphPosition:
           serializedVersion: 2
@@ -624,7 +624,7 @@ MonoBehaviour:
     0000000E:
       type: {class: , ns: , asm: }
     0000000F:
-      type: {class: FollowAction, ns: UniBT.Examples.Scripts.Behavior, asm: Assembly-CSharp}
+      type: {class: FollowAction, ns: UniBT.Examples.Scripts.Behavior, asm: Example}
       data:
         graphPosition:
           serializedVersion: 2
@@ -637,7 +637,7 @@ MonoBehaviour:
         speed: 2
         stoppingDistance: 1.5
     00000010:
-      type: {class: Rotator, ns: UniBT, asm: Assembly-CSharp}
+      type: {class: Rotator, ns: UniBT, asm: UniBT}
       data:
         graphPosition:
           serializedVersion: 2
@@ -651,7 +651,7 @@ MonoBehaviour:
         - id: 18
         resetOnAbort: 0
     00000011:
-      type: {class: AttackAction, ns: UniBT.Examples.Scripts.Behavior, asm: Assembly-CSharp}
+      type: {class: AttackAction, ns: UniBT.Examples.Scripts.Behavior, asm: Example}
       data:
         graphPosition:
           serializedVersion: 2
@@ -662,7 +662,7 @@ MonoBehaviour:
         description: 
         force: 4
     00000012:
-      type: {class: Random, ns: UniBT, asm: Assembly-CSharp}
+      type: {class: Random, ns: UniBT, asm: UniBT}
       data:
         graphPosition:
           serializedVersion: 2
@@ -675,7 +675,7 @@ MonoBehaviour:
         - id: 19
         - id: 20
     00000013:
-      type: {class: AttackAction, ns: UniBT.Examples.Scripts.Behavior, asm: Assembly-CSharp}
+      type: {class: AttackAction, ns: UniBT.Examples.Scripts.Behavior, asm: Example}
       data:
         graphPosition:
           serializedVersion: 2
@@ -686,7 +686,7 @@ MonoBehaviour:
         description: 
         force: 7
     00000014:
-      type: {class: AttackAction, ns: UniBT.Examples.Scripts.Behavior, asm: Assembly-CSharp}
+      type: {class: AttackAction, ns: UniBT.Examples.Scripts.Behavior, asm: Example}
       data:
         graphPosition:
           serializedVersion: 2
@@ -1122,7 +1122,7 @@ MonoBehaviour:
   references:
     version: 1
     00000000:
-      type: {class: Root, ns: UniBT, asm: Assembly-CSharp}
+      type: {class: Root, ns: UniBT, asm: UniBT}
       data:
         graphPosition:
           serializedVersion: 2
@@ -1134,7 +1134,7 @@ MonoBehaviour:
         child:
           id: 1
     00000001:
-      type: {class: Selector, ns: UniBT, asm: Assembly-CSharp}
+      type: {class: Selector, ns: UniBT, asm: UniBT}
       data:
         graphPosition:
           serializedVersion: 2
@@ -1149,7 +1149,7 @@ MonoBehaviour:
         - id: 4
         abortOnConditionChanged: 1
     00000002:
-      type: {class: Sequence, ns: UniBT, asm: Assembly-CSharp}
+      type: {class: Sequence, ns: UniBT, asm: UniBT}
       data:
         graphPosition:
           serializedVersion: 2
@@ -1163,7 +1163,7 @@ MonoBehaviour:
         - id: 6
         abortOnConditionChanged: 1
     00000003:
-      type: {class: IsHateGt, ns: UniBT.Examples.Scripts.Behavior, asm: Assembly-CSharp}
+      type: {class: IsHateGt, ns: UniBT.Examples.Scripts.Behavior, asm: Example}
       data:
         graphPosition:
           serializedVersion: 2
@@ -1177,7 +1177,7 @@ MonoBehaviour:
           id: 7
         threshold: 5
     00000004:
-      type: {class: Sequence, ns: UniBT, asm: Assembly-CSharp}
+      type: {class: Sequence, ns: UniBT, asm: UniBT}
       data:
         graphPosition:
           serializedVersion: 2
@@ -1191,7 +1191,7 @@ MonoBehaviour:
         - id: 9
         abortOnConditionChanged: 1
     00000005:
-      type: {class: Selector, ns: UniBT, asm: Assembly-CSharp}
+      type: {class: Selector, ns: UniBT, asm: UniBT}
       data:
         graphPosition:
           serializedVersion: 2
@@ -1205,7 +1205,7 @@ MonoBehaviour:
         - id: 11
         abortOnConditionChanged: 1
     00000006:
-      type: {class: All, ns: UniBT, asm: Assembly-CSharp}
+      type: {class: All, ns: UniBT, asm: UniBT}
       data:
         graphPosition:
           serializedVersion: 2
@@ -1218,7 +1218,7 @@ MonoBehaviour:
         - id: 12
         - id: 13
     00000007:
-      type: {class: LookAtAction, ns: UniBT.Examples.Scripts.Behavior, asm: Assembly-CSharp}
+      type: {class: LookAtAction, ns: UniBT.Examples.Scripts.Behavior, asm: Example}
       data:
         graphPosition:
           serializedVersion: 2
@@ -1230,7 +1230,7 @@ MonoBehaviour:
         useLerp: 1
         target: {fileID: 763948894}
     00000008:
-      type: {class: FollowAction, ns: UniBT.Examples.Scripts.Behavior, asm: Assembly-CSharp}
+      type: {class: FollowAction, ns: UniBT.Examples.Scripts.Behavior, asm: Example}
       data:
         graphPosition:
           serializedVersion: 2
@@ -1243,7 +1243,7 @@ MonoBehaviour:
         speed: 1
         stoppingDistance: 0.5
     00000009:
-      type: {class: ScaleAction, ns: UniBT.Examples.Scripts.Behavior, asm: Assembly-CSharp}
+      type: {class: ScaleAction, ns: UniBT.Examples.Scripts.Behavior, asm: Example}
       data:
         graphPosition:
           serializedVersion: 2
@@ -1253,7 +1253,7 @@ MonoBehaviour:
           height: 96
         description: 
     0000000A:
-      type: {class: IsAttacking, ns: UniBT.Examples.Scripts.Behavior, asm: Assembly-CSharp}
+      type: {class: IsAttacking, ns: UniBT.Examples.Scripts.Behavior, asm: Example}
       data:
         graphPosition:
           serializedVersion: 2
@@ -1266,7 +1266,7 @@ MonoBehaviour:
         child:
           id: 14
     0000000B:
-      type: {class: IsHateGt, ns: UniBT.Examples.Scripts.Behavior, asm: Assembly-CSharp}
+      type: {class: IsHateGt, ns: UniBT.Examples.Scripts.Behavior, asm: Example}
       data:
         graphPosition:
           serializedVersion: 2
@@ -1280,7 +1280,7 @@ MonoBehaviour:
           id: 14
         threshold: 10
     0000000C:
-      type: {class: LookAtAction, ns: UniBT.Examples.Scripts.Behavior, asm: Assembly-CSharp}
+      type: {class: LookAtAction, ns: UniBT.Examples.Scripts.Behavior, asm: Example}
       data:
         graphPosition:
           serializedVersion: 2
@@ -1292,7 +1292,7 @@ MonoBehaviour:
         useLerp: 1
         target: {fileID: 763948894}
     0000000D:
-      type: {class: Sequence, ns: UniBT, asm: Assembly-CSharp}
+      type: {class: Sequence, ns: UniBT, asm: UniBT}
       data:
         graphPosition:
           serializedVersion: 2
@@ -1308,7 +1308,7 @@ MonoBehaviour:
     0000000E:
       type: {class: , ns: , asm: }
     0000000F:
-      type: {class: FollowAction, ns: UniBT.Examples.Scripts.Behavior, asm: Assembly-CSharp}
+      type: {class: FollowAction, ns: UniBT.Examples.Scripts.Behavior, asm: Example}
       data:
         graphPosition:
           serializedVersion: 2
@@ -1321,7 +1321,7 @@ MonoBehaviour:
         speed: 2
         stoppingDistance: 1.5
     00000010:
-      type: {class: Rotator, ns: UniBT, asm: Assembly-CSharp}
+      type: {class: Rotator, ns: UniBT, asm: UniBT}
       data:
         graphPosition:
           serializedVersion: 2
@@ -1335,7 +1335,7 @@ MonoBehaviour:
         - id: 18
         resetOnAbort: 0
     00000011:
-      type: {class: AttackAction, ns: UniBT.Examples.Scripts.Behavior, asm: Assembly-CSharp}
+      type: {class: AttackAction, ns: UniBT.Examples.Scripts.Behavior, asm: Example}
       data:
         graphPosition:
           serializedVersion: 2
@@ -1346,7 +1346,7 @@ MonoBehaviour:
         description: 
         force: 4
     00000012:
-      type: {class: Random, ns: UniBT, asm: Assembly-CSharp}
+      type: {class: Random, ns: UniBT, asm: UniBT}
       data:
         graphPosition:
           serializedVersion: 2
@@ -1359,7 +1359,7 @@ MonoBehaviour:
         - id: 19
         - id: 20
     00000013:
-      type: {class: AttackAction, ns: UniBT.Examples.Scripts.Behavior, asm: Assembly-CSharp}
+      type: {class: AttackAction, ns: UniBT.Examples.Scripts.Behavior, asm: Example}
       data:
         graphPosition:
           serializedVersion: 2
@@ -1370,7 +1370,7 @@ MonoBehaviour:
         description: 
         force: 7
     00000014:
-      type: {class: AttackAction, ns: UniBT.Examples.Scripts.Behavior, asm: Assembly-CSharp}
+      type: {class: AttackAction, ns: UniBT.Examples.Scripts.Behavior, asm: Example}
       data:
         graphPosition:
           serializedVersion: 2
